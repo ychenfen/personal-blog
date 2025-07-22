@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="个人网站 - 展示技能、项目作品和职业经历的专业平台">
+    <meta name="keywords" content="前端开发,React,JavaScript,个人作品集,技术博客">
+    <meta name="author" content="您的姓名">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="个人网站 - 专业技术展示平台">
+    <meta property="og:description" content="展示前端开发技能、项目作品和技术见解的个人网站">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourname.github.io">
+    <meta property="og:image" content="./assets/images/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="个人网站 - 专业技术展示平台">
+    <meta name="twitter:description" content="展示前端开发技能、项目作品和技术见解的个人网站">
+    <meta name="twitter:image" content="./assets/images/og-image.jpg">
+    
+    <title>您的姓名 - 前端开发工程师</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="./assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "您的姓名",
+      "jobTitle": "前端开发工程师",
+      "description": "专业的前端开发工程师，专注于React、JavaScript和现代Web技术",
+      "url": "https://yourname.github.io",
+      "sameAs": [
+        "https://github.com/yourusername",
+        "https://linkedin.com/in/yourusername",
+        "https://twitter.com/yourusername"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "您的公司"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">跳转到主要内容</a>
+    
+    <!-- Header Navigation -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="主导航">
+            <div class="container">
+                <div class="nav__brand">
+                    <a href="#home" class="nav__logo" aria-label="返回首页">
+                        <span class="nav__logo-text">YN</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav__menu" id="nav-menu">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link" data-section="home">首页</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link" data-section="about">关于我</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link" data-section="skills">技能</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#blog" class="nav__link" data-section="blog">博客</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link" data-section="contact">联系</a>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="nav__toggle" id="nav-toggle" aria-label="切换导航菜单" aria-expanded="false">
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                    <span class="nav__toggle-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home" role="banner">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <h1 class="hero__title">
+                            <span class="hero__greeting">你好，我是</span>
+                            <span class="hero__name">您的姓名</span>
+                        </h1>
+                        <h2 class="hero__subtitle">前端开发工程师</h2>
+                        <p class="hero__description">
+                            专注于创建现代化、高性能的Web应用程序。
+                            <br>热爱技术，追求极致的用户体验。
+                        </p>
+                        
+                        <div class="hero__actions">
+                            <a href="#blog" class="btn btn--primary">阅读博客</a>
+                            <a href="#contact" class="btn btn--secondary">联系我</a>
+                        </div>
+                        
+                        <div class="hero__social">
+                            <a href="https://github.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:your.email@example.com" class="social-link" aria-label="邮箱">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero__image">
+                        <div class="hero__avatar">
+                            <img src="./assets/images/avatar.jpg" alt="个人头像" class="hero__photo" loading="eager">
+                            <div class="hero__avatar-ring"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scroll Indicator -->
+                <div class="hero__scroll">
+                    <a href="#about" class="scroll-indicator" aria-label="向下滚动">
+                        <span class="scroll-indicator__text">向下滚动</span>
+                        <div class="scroll-indicator__arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">关于我</h2>
+                    <p class="section__subtitle">了解我的背景和专业经历</p>
+                </div>
+                
+                <div class="about__content">
+                    <div class="about__text">
+                        <div class="about__intro">
+                            <h3>个人简介</h3>
+                            <p>
+                                我是一名充满热情的前端开发工程师，拥有5年的Web开发经验。
+                                专注于现代JavaScript框架、用户体验设计和性能优化。
+                                热衷于学习新技术，追求代码质量和最佳实践。
+                            </p>
+                            <p>
+                                在过去的项目中，我成功交付了多个大型Web应用，
+                                包括电商平台、管理系统和移动应用。
+                                擅长团队协作，具有良好的沟通能力和问题解决能力。
+                            </p>
+                        </div>
+                        
+                        <div class="about__highlights">
+                            <div class="highlight">
+                                <div class="highlight__number">5+</div>
+                                <div class="highlight__text">年开发经验</div>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight__number">20+</div>
+                                <div class="highlight__text">完成项目</div>
+                            </div>
+                            <div class="highlight">
+                                <div class="highlight__number">100%</div>
+                                <div class="highlight__text">客户满意度</div>
+                            </div>
+                        </div>
+                        
+                        <div class="about__actions">
+                            <a href="./assets/docs/resume.pdf" class="btn btn--primary" download>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                                </svg>
+                                下载简历
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="about__timeline">
+                        <h3>工作经历</h3>
+                        <div class="timeline">
+                            <div class="timeline__item">
+                                <div class="timeline__date">2021 - 至今</div>
+                                <div class="timeline__content">
+                                    <h4>高级前端开发工程师</h4>
+                                    <p class="timeline__company">科技公司A</p>
+                                    <ul class="timeline__achievements">
+                                        <li>负责多个大型项目的前端架构设计和开发</li>
+                                        <li>优化应用性能，提升页面加载速度50%</li>
+                                        <li>建立前端开发规范和最佳实践</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline__item">
+                                <div class="timeline__date">2019 - 2021</div>
+                                <div class="timeline__content">
+                                    <h4>前端开发工程师</h4>
+                                    <p class="timeline__company">科技公司B</p>
+                                    <ul class="timeline__achievements">
+                                        <li>开发和维护多个Web应用程序</li>
+                                        <li>参与移动端应用开发，提升用户体验</li>
+                                        <li>协助团队技术选型和架构优化</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline__item">
+                                <div class="timeline__date">2018 - 2019</div>
+                                <div class="timeline__content">
+                                    <h4>初级前端开发工程师</h4>
+                                    <p class="timeline__company">科技公司C</p>
+                                    <ul class="timeline__achievements">
+                                        <li>学习现代前端技术栈</li>
+                                        <li>参与多个小型项目开发</li>
+                                        <li>建立扎实的前端开发基础</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">技能专长</h2>
+                    <p class="section__subtitle">我的技术能力和专业技能</p>
+                </div>
+                
+                <div class="skills__content">
+                    <div class="skills__categories">
+                        <div class="skill-category">
+                            <h3 class="skill-category__title">前端技术</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill-item__name">JavaScript/TypeScript</span>
+                                        <span class="skill-item__level">95%</span>
+                                    </div>
+                                    <div class="skill-item__bar">
+                                        <div class="skill-item__progress" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill-item__name">React/Vue.js</span>
+                                        <span class="skill-item__level">90%</span>
+                                    </div>
+                                    <div class="skill-item__bar">
+                                        <div class="skill-item__progress" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill-item__name">HTML5/CSS3</span>
+                                        <span class="skill-item__level">95%</span>
+                                    </div>
+                                    <div class="skill-item__bar">
+                                        <div class="skill-item__progress" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill-item__name">Sass/Less</span>
+                                        <span class="skill-item__level">85%</span>
+                                    </div>
+                                    <div class="skill-item__bar">
+                                        <div class="skill-item__progress" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3 class="skill-category__title">开发工具</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill-item__name">Git/GitHub</span>
+                                        <span class="skill-item__level">90%</span>
+                                    </div>
+                                    <div class="skill-item__bar">
+                                        <div class="skill-item__progress" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill-item__name">Webpack/Vite</span>
+                                        <span class="skill-item__level">80%</span>
+                                    </div>
+                                    <div class="skill-item__bar">
+                                        <div class="skill-item__progress" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill-item__name">VS Code</span>
+                                        <span class="skill-item__level">95%</span>
+                                    </div>
+                                    <div class="skill-item__bar">
+                                        <div class="skill-item__progress" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3 class="skill-category__title">后端技术</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill-item__name">Node.js</span>
+                                        <span class="skill-item__level">75%</span>
+                                    </div>
+                                    <div class="skill-item__bar">
+                                        <div class="skill-item__progress" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill-item__name">Express.js</span>
+                                        <span class="skill-item__level">70%</span>
+                                    </div>
+                                    <div class="skill-item__bar">
+                                        <div class="skill-item__progress" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill-item__name">MongoDB</span>
+                                        <span class="skill-item__level">65%</span>
+                                    </div>
+                                    <div class="skill-item__bar">
+                                        <div class="skill-item__progress" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Projects Section removed, replaced with blog -->
+
+<!-- Blog Section -->        <section class="blog" id="blog">
+            <div class="container">
+                <div id="blog-container">
+                    <!-- 博客内容将通过JavaScript动态生成 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">联系我</h2>
+                    <p class="section__subtitle">有项目合作或技术交流，欢迎与我联系</p>
+                </div>
+                
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact__item">
+                            <div class="contact__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+                                </svg>
+                            </div>
+                            <div class="contact__details">
+                                <h3>邮箱</h3>
+                                <p>your.email@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <div class="contact__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                                </svg>
+                            </div>
+                            <div class="contact__details">
+                                <h3>电话</h3>
+                                <p>+86 138 0000 0000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <div class="contact__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"/>
+                                </svg>
+                            </div>
+                            <div class="contact__details">
+                                <h3>位置</h3>
+                                <p>中国 · 北京</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__social">
+                            <h3>社交媒体</h3>
+                            <div class="social-links">
+                                <a href="https://github.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://twitter.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://weixin.qq.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="微信">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.098 4.203 2.832 5.52L2.14 17.25l2.856-1.414c.756.126 1.566.22 2.695.22.398 0 .787-.035 1.166-.08-.117-.375-.187-.765-.187-1.17 0-3.66 3.403-6.633 7.594-6.633.211 0 .41.024.61.047C16.27 5.02 13.056 2.188 8.691 2.188zm-2.388 2.918c.585 0 .969.398.969.984 0 .578-.384.969-.969.969-.585 0-1.031-.39-1.031-.969 0-.586.446-.984 1.031-.984zm4.78 0c.578 0 .96.398.96.984 0 .578-.382.969-.96.969-.594 0-1.04-.39-1.04-.969 0-.586.446-.984 1.04-.984zM15.672 9.305c-3.465 0-6.266 2.454-6.266 5.484 0 3.043 2.801 5.497 6.266 5.497.781 0 1.543-.105 2.199-.32l2.199 1.07-.586-1.953c1.32-1.031 2.16-2.688 2.16-4.434 0-3.043-2.801-5.344-6.266-5.344zm-1.468 2.422c.469 0 .773.304.773.773s-.304.766-.773.766c-.476 0-.856-.297-.856-.766s.38-.773.856-.773zm2.918 0c.469 0 .773.304.773.773s-.304.766-.773.766-.773-.297-.773-.766.304-.773.773-.773z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__form">
+                        <form class="form" id="contact-form" novalidate>
+                            <div class="form__group">
+                                <label for="name" class="form__label">姓名 *</label>
+                                <input type="text" id="name" name="name" class="form__input" required>
+                                <span class="form__error" id="name-error"></span>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="email" class="form__label">邮箱 *</label>
+                                <input type="email" id="email" name="email" class="form__input" required>
+                                <span class="form__error" id="email-error"></span>
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="subject" class="form__label">主题</label>
+                                <input type="text" id="subject" name="subject" class="form__input">
+                            </div>
+                            
+                            <div class="form__group">
+                                <label for="message" class="form__label">消息 *</label>
+                                <textarea id="message" name="message" class="form__textarea" rows="5" required></textarea>
+                                <span class="form__error" id="message-error"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn--primary btn--full">
+                                <span class="btn__text">发送消息</span>
+                                <span class="btn__loading" style="display: none;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z">
+                                            <animateTransform attributeName="transform" type="rotate" dur="1s" values="0 12 12;360 12 12" repeatCount="indefinite"/>
+                                        </path>
+                                    </svg>
+                                    发送中...
+                                </span>
+                            </button>
+                        </form>
+                        
+                        <div class="form__success" id="form-success" style="display: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z"/>
+                            </svg>
+                            <p>消息发送成功！我会尽快回复您。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <p>&copy; 2023 您的姓名. 保留所有权利.</p>
+                    <p>使用现代Web技术构建 ❤️</p>
+                </div>
+                
+                <div class="footer__links">
+                    <a href="#privacy" class="footer__link">隐私政策</a>
+                    <a href="#terms" class="footer__link">使用条款</a>
+                    <a href="#sitemap" class="footer__link">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="返回顶部" style="display: none;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="./assets/js/blog-system.js"></script>
+    <script src="./assets/js/github-projects.js"></script>
+    <script src="./assets/js/main.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(function(error) {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

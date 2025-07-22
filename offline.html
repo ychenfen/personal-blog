@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>离线状态 - 个人网站</title>
+    <style>
+        :root {
+            --color-primary: #2563eb;
+            --color-text-primary: #1f2937;
+            --color-text-secondary: #6b7280;
+            --color-bg-primary: #ffffff;
+            --color-bg-secondary: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--color-bg-secondary);
+            color: var(--color-text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .offline-container {
+            max-width: 500px;
+            background-color: var(--color-bg-primary);
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .offline-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background-color: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .offline-icon svg {
+            width: 40px;
+            height: 40px;
+            color: var(--color-primary);
+        }
+
+        .offline-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--color-text-primary);
+        }
+
+        .offline-message {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .offline-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 400px) {
+            .offline-actions {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            border: 2px solid;
+            border-radius: 0.5rem;
+            transition: all 0.15s ease-in-out;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            border-color: var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            border-color: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-text-secondary);
+            border-color: #e5e7eb;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-bg-secondary);
+            color: var(--color-text-primary);
+        }
+
+        .network-status {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: var(--color-bg-secondary);
+            border-radius: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            background-color: #ef4444;
+        }
+
+        .status-indicator.online {
+            background-color: #10b981;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-text-primary: #f8fafc;
+                --color-text-secondary: #cbd5e1;
+                --color-bg-primary: #1e293b;
+                --color-bg-secondary: #334155;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.64 7c-.45-.34-4.93-4-11.64-4-1.5 0-2.89.19-4.15.48L18.18 13.8 23.64 7zm-6.6 8.22L3.27 1.44 2 2.72l2.05 2.06C1.91 5.76.59 6.82.36 7l11.63 14.49.01.01.01-.01L18.09 9.66l1.64 1.64 1.27-1.27z"/>
+            </svg>
+        </div>
+        
+        <h1 class="offline-title">您当前处于离线状态</h1>
+        
+        <p class="offline-message">
+            看起来您的网络连接出现了问题。请检查您的网络连接，然后重试。
+        </p>
+        
+        <div class="offline-actions">
+            <button class="btn btn-primary" onclick="window.location.reload()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+                </svg>
+                重新加载
+            </button>
+            
+            <a href="/" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+                返回首页
+            </a>
+        </div>
+        
+        <div class="network-status">
+            <span class="status-indicator" id="status-indicator"></span>
+            <span id="status-text">检查网络状态中...</span>
+        </div>
+    </div>
+
+    <script>
+        // Check network status
+        function updateNetworkStatus() {
+            const indicator = document.getElementById('status-indicator');
+            const text = document.getElementById('status-text');
+            
+            if (navigator.onLine) {
+                indicator.classList.add('online');
+                text.textContent = '网络连接已恢复';
+                
+                // Auto reload after 2 seconds if back online
+                setTimeout(() => {
+                    window.location.reload();
+                }, 2000);
+            } else {
+                indicator.classList.remove('online');
+                text.textContent = '当前处于离线状态';
+            }
+        }
+
+        // Listen for network status changes
+        window.addEventListener('online', updateNetworkStatus);
+        window.addEventListener('offline', updateNetworkStatus);
+
+        // Initial check
+        updateNetworkStatus();
+
+        // Periodic check
+        setInterval(() => {
+            // Try to fetch a small resource to test connectivity
+            fetch('/favicon.ico', { 
+                method: 'HEAD',
+                cache: 'no-cache'
+            })
+            .then(() => {
+                if (!navigator.onLine) {
+                    // Force online status if fetch succeeds
+                    updateNetworkStatus();
+                }
+            })
+            .catch(() => {
+                // Connection failed
+                const indicator = document.getElementById('status-indicator');
+                const text = document.getElementById('status-text');
+                indicator.classList.remove('online');
+                text.textContent = '网络连接不稳定';
+            });
+        }, 5000);
+    </script>
+</body>
+</html>

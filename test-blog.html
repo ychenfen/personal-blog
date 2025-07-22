@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客系统测试</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>博客系统测试</h1>
+        <div id="blog-container">
+            <!-- 博客内容将在这里显示 -->
+        </div>
+    </div>
+
+    <script src="./assets/js/blog-system.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, testing blog system...');
+            
+            if (typeof BlogSystem === 'undefined') {
+                console.error('BlogSystem not loaded');
+                return;
+            }
+            
+            const container = document.getElementById('blog-container');
+            if (!container) {
+                console.error('Container not found');
+                return;
+            }
+            
+            console.log('Creating BlogSystem...');
+            try {
+                const blog = new BlogSystem('blog-container', {
+                    postsPerPage: 3,
+                    showExcerpt: true,
+                    enableSearch: true,
+                    enableCategories: true
+                });
+                
+                console.log('BlogSystem created successfully');
+                window.testBlog = blog;
+            } catch (error) {
+                console.error('Error creating BlogSystem:', error);
+            }
+        });
+    </script>
+</body>
+</html>

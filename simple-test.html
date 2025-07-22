@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务器测试页面</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        .status {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 2rem 0;
+        }
+        .links {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .links a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        .emoji {
+            font-size: 3rem;
+            display: block;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 服务器运行成功！</h1>
+        
+        <div class="status">
+            <span class="emoji">✅</span>
+            <p>恭喜！您的本地服务器已经正常运行。</p>
+            <p>现在可以访问完整的博客系统了。</p>
+        </div>
+        
+        <div class="links">
+            <a href="index.html">📖 查看完整博客</a>
+            <a href="test-blog.html">🧪 博客系统测试</a>
+        </div>
+        
+        <div style="margin-top: 3rem; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: 10px;">
+            <h3>📚 博客系统包含:</h3>
+            <ul style="text-align: left; line-height: 1.8;">
+                <li>🚀 <strong>前端性能优化终极指南</strong> - Core Web Vitals深度分析</li>
+                <li>⚛️ <strong>React 18并发渲染深度剖析</strong> - Fiber架构详解</li>
+                <li>🖖 <strong>Vue 3组合式API深度实战</strong> - 响应式系统解析</li>
+                <li>🌟 <strong>JavaScript ES6+核心特性深度剖析</strong> - 现代JS必备技能</li>
+                <li>🎨 <strong>现代CSS布局技术深度对比</strong> - Grid vs Flexbox</li>
+                <li>🔷 <strong>TypeScript最佳实践</strong> - 类型系统高级应用</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+            <p>作者：迫暮 | 所有文章均包含详细技术干货</p>
+        </div>
+    </div>
+
+    <script>
+        // 简单的页面加载动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                container.style.transition = 'all 0.6s ease';
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
