@@ -1,6 +1,18 @@
-# 🌟 个人技术博客
+# 🌟 个人技术博客 | Personal Tech Blog
 
-一个现代化、响应式的个人技术博客，包含6篇高质量前端开发深度文章。
+<div align="center">
+
+![GitHub stars](https://img.shields.io/github/stars/ychenfen/personal-blog?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/ychenfen/personal-blog?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/ychenfen/personal-blog?style=flat-square)
+
+**🚀 [在线访问 | Visit Online](https://ychenfen.github.io/personal-blog/)**
+
+*现代化响应式个人技术博客，包含6篇高质量前端开发深度文章*
+
+</div>
+
+---
 
 ## 🎯 项目概览
 
@@ -111,6 +123,9 @@ personal-website/
 ```
 
 ## 🌐 在线访问
+
+### 🎯 立即体验
+**直接访问**: https://ychenfen.github.io/personal-blog/
 
 ### GitHub Pages部署
 
